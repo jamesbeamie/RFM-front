@@ -1,0 +1,11 @@
+.logo {
+	height: 3rem;
+	object-fit: cover;
+}
+.navigation-style {
+	background-color: rgb(113, 37, 180);
+	opacity: .9;
+}
+.linki{
+	color: rgb(163, 64, 163) !important;
+}

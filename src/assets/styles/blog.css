@@ -1,0 +1,13 @@
+.home-control {
+	border: 1px solid red;
+	text-align: center;
+	padding: 1rem;
+	margin: 8rem auto;
+	width: 30rem;
+	max-width: 80%;
+}
+.fonti p {
+	font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+	font-weight: 100;
+	font-size: 14px;
+}

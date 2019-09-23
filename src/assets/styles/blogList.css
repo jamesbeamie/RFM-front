@@ -1,0 +1,7 @@
+.home_list {
+	margin: 4rem auto;
+	list-style: none;
+	padding: 0;
+	width: 60rem;
+	max-width: 80%;
+}
