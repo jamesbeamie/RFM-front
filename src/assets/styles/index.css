@@ -1,7 +1,7 @@
 #app {
 	max-width: 100%;
 	margin-top: 80px;
-	font-family: "verdana",helvetica, arial, sans-serif;
+	font-family: "verdana";
 }
 
 nav {
@@ -23,8 +23,7 @@ nav {
 }
 .form-ctrl label,
 .form-ctrl input,
-.form-ctrl textarea 
-{
+.form-ctrl textarea {
 	color: rgb(108, 5, 131);
 	width: 100%;
 	display: block;
@@ -79,7 +78,7 @@ nav {
 	border: 1px solid rgb(108, 5, 131);
 	box-shadow: 3px 3px 5px rgb(108, 5, 131);
 }
-.btn:hover{
+.btn:hover {
 	margin-top: 10px;
 	margin-right: 1rem;
 	padding: 3px;
