@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../../assets/styles/blogModal.css';
@@ -117,7 +115,6 @@ class CreateBump extends Component {
 					bumpArray: blogs,
 					isLoading: false
 				});
-				
 			})
 			.catch((err) => {
 				return err;
