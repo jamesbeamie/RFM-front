@@ -1,5 +1,6 @@
 import { UPLOAD_BUMP_SUCCESS, UPLOAD_BUMP_FAILED } from './types';
 import urlPath from '../common/axiosConfig';
+import { toast } from 'react-toastify';
 
 const uploadBumpAction = (bumpData) => (dispatch) => {
 	return urlPath
@@ -18,7 +19,8 @@ const uploadBumpAction = (bumpData) => (dispatch) => {
 			dispatch({
 				type: UPLOAD_BUMP_SUCCESS,
 				payload: blogdata
-			})
+			}),
+			toast.success('image uploaded')
 		)
 		.catch((err) =>
 			dispatch({

@@ -13,6 +13,7 @@ import CreateBump from './containers/createBump';
 import CreateChild from './containers/createChildren';
 import CreateFamily from './containers/createFamily';
 import CreatePotrait from './containers/createPotrait';
+import { ToastContainer, toast } from 'react-toastify';
 const App = () => {
 	const userToken = localStorage.getItem('token');
 	return (
@@ -33,6 +34,7 @@ const App = () => {
 				<Route path="/potraits" component={CreatePotrait} />
 				<Route component={PageNotFound} />
 			</Switch>
+			<ToastContainer />
 		</div>
 	);
 };
