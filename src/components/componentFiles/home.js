@@ -23,34 +23,34 @@ const HomePage = () => {
 				<div className="wrapper">
 					<Carousel>
 						<Carousel.Item>
-							<img src={image3} className="carousel_image" alt="..." />
+							<img src={image3} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image1} className="carousel_image" alt="..." />
+							<img src={image1} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image21} className="carousel_image" alt="..." />
+							<img src={image21} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image2} className="carousel_image" alt="..." />
+							<img src={image2} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image} className="carousel_image" alt="..." />
+							<img src={image} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image31} className="carousel_image" alt="..." />
+							<img src={image31} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image6} className="carousel_image" alt="..." />
+							<img src={image6} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image4} className="carousel_image" alt="..." />
+							<img src={image4} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image5} className="carousel_image" alt="..." />
+							<img src={image5} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 						<Carousel.Item>
-							<img src={image7} className="carousel_image" alt="..." />
+							<img src={image7} className="img-fluid carousel_image" alt="..." />
 						</Carousel.Item>
 					</Carousel>
 				</div>
