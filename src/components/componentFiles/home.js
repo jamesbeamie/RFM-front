@@ -71,10 +71,10 @@ const HomePage = () => {
 					</div>
 					<div className="col-sm-4 paded">
 						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/g_m_e23" />
+							<SocialIcon url="http://instagram.com/royalframesmedia" />
 						</span>
 						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/Jeamiejames" />
+							<SocialIcon url="http://facebook.com/royalframesmedia" />
 						</span>
 					</div>
 				</div>
