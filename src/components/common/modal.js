@@ -3,6 +3,7 @@ import React from 'react';
 import '../../assets/styles/index.css';
 import '../../assets/styles/modal.css';
 
+const userToken = localStorage.getItem('token');
 const MyModal = (props) => {
 	return (
 		<div className="MyModal">
@@ -12,12 +13,14 @@ const MyModal = (props) => {
 			</header>
 			<section className="MyModal_content">{props.children}</section>
 			<section className="MyModal_actions">
-				{props.canCancel && (
+				{props.canCancel &&
+				userToken && (
 					<button className="btn" onClick={props.onCancel}>
 						close
 					</button>
 				)}
-				{props.canConfirm && (
+				{props.canConfirm &&
+				userToken && (
 					<button className="btn" onClick={props.onConfirm}>
 						{props.confirmText}
 					</button>
