@@ -1,5 +1,6 @@
 import { UPLOAD_ENGAGEMENT_SUCCESS, UPLOAD_ENGAGEMENT_FAILED } from './types';
 import urlPath from '../common/axiosConfig';
+import { toast } from 'react-toastify';
 
 const uploadEngagementAction = (engagementData) => (dispatch) => {
 	return urlPath
@@ -18,7 +19,8 @@ const uploadEngagementAction = (engagementData) => (dispatch) => {
 			dispatch({
 				type: UPLOAD_ENGAGEMENT_SUCCESS,
 				payload: engagementdata
-			})
+			}),
+			toast.success('image uploaded')
 		)
 		.catch((err) =>
 			dispatch({

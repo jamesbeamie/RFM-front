@@ -1,5 +1,6 @@
 import { UPLOAD_CHILDREN_SUCCESS, UPLOAD_CHILDREN_FAILED } from './types';
 import urlPath from '../common/axiosConfig';
+import { toast } from 'react-toastify';
 
 const uploadChildrenAction = (childData) => (dispatch) => {
 	return urlPath
@@ -18,7 +19,8 @@ const uploadChildrenAction = (childData) => (dispatch) => {
 			dispatch({
 				type: UPLOAD_CHILDREN_SUCCESS,
 				payload: blogdata
-			})
+			}),
+			toast.success('image uploaded')
 		)
 		.catch((err) =>
 			dispatch({

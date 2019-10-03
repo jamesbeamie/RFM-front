@@ -1,6 +1,6 @@
 import { CREATE_BLOGS_SUCCESS, CREATE_BLOGS_FAILED } from './types';
 import urlPath from '../common/axiosConfig';
-
+import { toast } from 'react-toastify';
 const createBlogAction = (blogData) => (dispatch) => {
 	return urlPath
 		.request({
@@ -21,7 +21,8 @@ const createBlogAction = (blogData) => (dispatch) => {
 			dispatch({
 				type: CREATE_BLOGS_SUCCESS,
 				payload: blogdata
-			})
+			}),
+			toast.success('Blog created successfuly')
 		)
 		.catch((err) =>
 			dispatch({

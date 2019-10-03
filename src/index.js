@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/App';
 import store from './redux/store';
 import './assets/styles/index.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 render(
 	<Provider store={store}>
