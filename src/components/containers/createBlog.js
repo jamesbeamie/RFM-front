@@ -54,7 +54,7 @@ class CreateBlog extends Component {
 		this.fetchPotraits();
 		setTimeout(() => {
 			this.pickImage();
-		}, 500);
+		}, 1500);
 	}
 
 	handleCreateBlog = () => {
