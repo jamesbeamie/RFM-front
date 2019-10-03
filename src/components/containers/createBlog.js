@@ -54,7 +54,7 @@ class CreateBlog extends Component {
 		this.fetchPotraits();
 		setTimeout(() => {
 			this.pickImage();
-		}, 1000);
+		}, 500);
 	}
 
 	handleCreateBlog = () => {
@@ -142,6 +142,7 @@ class CreateBlog extends Component {
 		potraitArray.map((moja) => {
 			allImages.push(moja);
 		});
+		console.log('fotosy', allImages);
 		this.setState({
 			mapicha: allImages
 		});
@@ -279,7 +280,7 @@ class CreateBlog extends Component {
 		const userToken = localStorage.getItem('token');
 
 		const picha = blogImages.map((moja) => {
-			return <img key={moja.slug} className="img-fluid my-2" src={moja} />;
+			return <img key={moja.slug} className="img-fluid my-2" src={moja} alt="blogImage" />;
 		});
 		return (
 			<React.Fragment>
@@ -368,7 +369,7 @@ class CreateBlog extends Component {
 									</p>
 								</div>
 								<div className="col-md-12">
-									<img className="img-fluid" src={specificBlog.image_path} />
+									<img className="img-fluid" src={specificBlog.image_path} alt="blogImage" />
 								</div>
 							</div>
 							<div className="row">
