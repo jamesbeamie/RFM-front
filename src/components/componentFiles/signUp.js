@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import '../../assets/styles/auth.css';
 import signUpAction from '../actions/singUp';
+import { Link } from 'react-router-dom';
 class AuthPage extends Component {
 	constructor(props) {
 		super(props);
@@ -44,7 +45,7 @@ class AuthPage extends Component {
 				</div>
 				<div className="form-axon">
 					<button type="submit">Sign Up</button>
-					<a href="/signin">Or login</a>
+					<Link to="/signin">Or login</Link>
 				</div>
 			</form>
 		);

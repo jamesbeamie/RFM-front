@@ -55,9 +55,9 @@ class Header extends React.Component {
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link linki" href="/bumps">
+							<NavLink className="nav-link linki" to="/bumps" exact>
 								BUMPS
-							</a>
+							</NavLink>
 						</li>
 						{!userToken && (
 							<li className="nav-item">
