@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../../assets/styles/auth.css';
 import HomePage from './home';
 import signInAction from '../actions/signIn';
+import { Link } from 'react-router-dom';
 class LoginPage extends Component {
 	constructor(props) {
 		super(props);
@@ -49,11 +50,11 @@ class LoginPage extends Component {
 						</div>
 						<div className="form-axon">
 							<button type="submit">Login</button>
-							<a href="/signup">Or signup</a>
+							<Link to="/signup">Or signup</Link>
 						</div>
 						<br />
 						<div className="form-axon">
-							<a href="/link-to-reset">Forgot password?</a>
+							<Link to="/link-to-reset">Forgot password?</Link>
 						</div>
 					</form>
 				) : (
