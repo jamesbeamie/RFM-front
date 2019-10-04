@@ -62,7 +62,7 @@ class Header extends React.Component {
 						{!userToken && (
 							<li className="nav-item">
 								<NavLink className="nav-link linki" to="/signin" exact>
-									SIGNIN
+									`
 								</NavLink>
 							</li>
 						)}
