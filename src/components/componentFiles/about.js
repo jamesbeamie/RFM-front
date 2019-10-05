@@ -19,212 +19,58 @@ const AboutPage = () => {
 	return (
 		<React.Fragment>
 
-			<section id="prlx">
+			<section className="img-fluid" id="prlx">
 				<div className="container-fluid">
 					<div className="wtitle text-center">
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
+						<h5>Creative</h5>
+						<h5>Passionate</h5>
+						<h5>Work oriented</h5>
+						
 					</div>
 				</div>
 			</section>
 
 			<section>
-				<div className="row container-fluid bg-light text-center">
-					<div className="col-sm-4">
-						<p className="fonti">&copy;RoyalFramesMedia</p>
-					</div>
-					<div className="col-sm-4 text-center">
-						<p className="fonti">
-							<FontAwesomeIcon icon={faPhone} /> 0725298331
-						</p>
-						<p className="fonti">
-							<FontAwesomeIcon icon={faAddressBook} /> royalframesmedia@gmail.com
-						</p>
-					</div>
-					<div className="col-sm-4">
-						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/royalframesmedia" />
-						</span>
-						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/royalframesmedia" />
-						</span>
-					</div>
-				</div>
-			</section>
-
-<section>
-				<div className="row container-fluid bg-light text-center">
-					<div className="col-sm-4">
-						<p className="fonti">&copy;RoyalFramesMedia</p>
-					</div>
-					<div className="col-sm-4 text-center">
-						<p className="fonti">
-							<FontAwesomeIcon icon={faPhone} /> 0725298331
-						</p>
-						<p className="fonti">
-							<FontAwesomeIcon icon={faAddressBook} /> royalframesmedia@gmail.com
-						</p>
-					</div>
-					<div className="col-sm-4">
-						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/royalframesmedia" />
-						</span>
-						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/royalframesmedia" />
-						</span>
-					</div>
-				</div>
-			</section>
-
-<section>
-
-			
-				<div className="row container-fluid bg-light text-center">
-					<div className="col-sm-4">
-						<p className="fonti">&copy;RoyalFramesMedia</p>
-					</div>
-					<div className="col-sm-4 text-center">
-						<p className="fonti">
-							<FontAwesomeIcon icon={faPhone} /> 0725298331
-						</p>
-						<p className="fonti">
-							<FontAwesomeIcon icon={faAddressBook} /> royalframesmedia@gmail.com
-						</p>
-					</div>
-					<div className="col-sm-4">
-						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/royalframesmedia" />
-						</span>
-						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/royalframesmedia" />
-						</span>
-					</div>
-				</div>
-			</section>
-
-
-
-			<section>
-				<div className="row container-fluid bg-light text-center">
-					<div className="col-sm-4">
-						<p className="fonti">&copy;RoyalFramesMedia</p>
-					</div>
-					<div className="col-sm-4 text-center">
-						<p className="fonti">
-							<FontAwesomeIcon icon={faPhone} /> 0725298331
-						</p>
-						<p className="fonti">
-							<FontAwesomeIcon icon={faAddressBook} /> royalframesmedia@gmail.com
-						</p>
-					</div>
-					<div className="col-sm-4">
-						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/royalframesmedia" />
-						</span>
-						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/royalframesmedia" />
-						</span>
+				<div className="row bg-light text-center container-fluid">
+					<div className="col-sm-12">
+						<h3>About us</h3>
+					<hr></hr>
 					</div>
 				</div>
 			</section>
 
 			<section>
-				<div className="row container-fluid bg-light text-center">
+				<div id="wording" className="row container-fluid bg-light text-center">
+				
 					<div className="col-sm-4">
-						<p className="fonti">&copy;RoyalFramesMedia</p>
+					<h5>Who we are</h5>
+						<p className="fonti">We are RoyalFramesMedia, </p>
+						<p className="fonti">a company founded by Rose Brian, motivated by the need t have more creative content creators</p>
 					</div>
 					<div className="col-sm-4 text-center">
+						<h5>What we do</h5>
+						<p className="fonti">We do photography We do photography We do photography</p>
+						<p className="fonti">We do photography We do photography We do photography We do photography We do photography We do photography</p>
+					</div>
+					<div className="col-sm-4 text-center">
+						<h5>Contact info</h5>
 						<p className="fonti">
 							<FontAwesomeIcon icon={faPhone} /> 0725298331
 						</p>
 						<p className="fonti">
 							<FontAwesomeIcon icon={faAddressBook} /> royalframesmedia@gmail.com
 						</p>
-					</div>
-					<div className="col-sm-4">
-						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/royalframesmedia" />
-						</span>
-						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/royalframesmedia" />
-						</span>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div className="row container-fluid bg-light text-center">
-					<div className="col-sm-4">
-						<p className="fonti">&copy;RoyalFramesMedia</p>
-					</div>
-					<div className="col-sm-4 text-center">
-						<p className="fonti">
-							<FontAwesomeIcon icon={faPhone} /> 0725298331
-						</p>
-						<p className="fonti">
-							<FontAwesomeIcon icon={faAddressBook} /> royalframesmedia@gmail.com
-						</p>
-					</div>
-					<div className="col-sm-4">
-						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/royalframesmedia" />
-						</span>
-						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/royalframesmedia" />
-						</span>
-					</div>
-				</div>
-			</section>
-			<section>
-				<div className="row container-fluid bg-light text-center">
-					<div className="col-sm-4">
-						<p className="fonti">&copy;RoyalFramesMedia</p>
-					</div>
-					<div className="col-sm-4 text-center">
-						<p className="fonti">
-							<FontAwesomeIcon icon={faPhone} /> 0725298331
-						</p>
-						<p className="fonti">
-							<FontAwesomeIcon icon={faAddressBook} /> royalframesmedia@gmail.com
-						</p>
-					</div>
-					<div className="col-sm-4">
-						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/royalframesmedia" />
-						</span>
-						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/royalframesmedia" />
-						</span>
+
 					</div>
 				</div>
 			</section>
 
 			<section id="plx">
 				<div className="container-fluid">
-					<div className="wtitle text-center">
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
-						<h5>fghjkl dfghj ertyui rfghj rtyu</h5>
+					<div className="wtitlebtm text-left">
+						<h5>We are here to deliver what you ask for,</h5>
+						<h5>In the right quality, quantity</h5>
+						<h5>and keep the smile in your heart growing</h5>
 					</div>
 				</div>
 			</section>
