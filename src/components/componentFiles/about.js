@@ -45,7 +45,7 @@ const AboutPage = () => {
 					<div className="col-sm-4">
 					<h5>Who we are</h5>
 						<p className="fonti">We are RoyalFramesMedia, </p>
-						<p className="fonti">a company founded by Rose Brian, motivated by the need t have more creative content creators</p>
+						<p className="fonti">a company founded by Rose Brian, motivated by the need to have more creative content creators</p>
 					</div>
 					<div className="col-sm-4 text-center">
 						<h5>What we do</h5>

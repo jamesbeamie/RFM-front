@@ -4,10 +4,11 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	object-fit: cover;
 }
 #plx{
 	background: url('../images/image7.jpg');
-	opacity: .5;
+	opacity: .3;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -28,6 +29,6 @@
 	padding: .5rem 0;
 }
 #wording{
-	height: 10rem;
+	/*height: 10rem;*/
 
 }

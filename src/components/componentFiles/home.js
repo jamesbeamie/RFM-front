@@ -54,30 +54,6 @@ const HomePage = () => {
 					</Carousel>
 				</div>
 			</section>
-
-			<section>
-				<div className="row container-fluid bg-light text-center">
-					<div className="col-sm-4 padedcont">
-						<p className="fonti">&copy;RoyalFramesMedia</p>
-					</div>
-					<div className="col-sm-4 text-center paded">
-						<p className="fonti">
-							<FontAwesomeIcon icon={faPhone} /> 0725298331
-						</p>
-						<p className="fonti">
-							<FontAwesomeIcon icon={faAddressBook} /> royalframesmedia@gmail.com
-						</p>
-					</div>
-					<div className="col-sm-4 paded">
-						<span className="soc-media">
-							<SocialIcon url="http://instagram.com/royalframesmedia" />
-						</span>
-						<span className="soc-media">
-							<SocialIcon url="http://facebook.com/royalframesmedia" />
-						</span>
-					</div>
-				</div>
-			</section>
 		</React.Fragment>
 	);
 };
