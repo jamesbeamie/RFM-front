@@ -1,7 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { SocialIcon } from 'react-social-icons';
 import image1 from '../../assets/images/image1.jpg';
