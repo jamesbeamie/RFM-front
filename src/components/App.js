@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import HomePage from './componentFiles/home';
+import AboutPage from './componentFiles/about';
 import Header from './common/header';
 import AuthPage from './componentFiles/signUp';
 import LoginPage from './componentFiles/login';
@@ -25,6 +26,7 @@ const App = () => {
 				{!userToken && <Route path="/signin" component={LoginPage} />}
 				{userToken && <Redirect from="/signin" to="/" exact />}
 				<Route path="/link-to-reset" component={ResetRequest} />
+				<Route path="/about" component={AboutPage} />
 				<Route path="/authenticate-reset" component={PwdReset} />
 				<Route path="/blog" component={CreateBlog} />
 				<Route path="/engagements" component={CreateEngagement} />
