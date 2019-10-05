@@ -1,14 +1,6 @@
-#prlx{
-	background: url('../images/image3.jpg');
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	object-fit: cover;
-}
 #plx{
 	background: url('../images/image7.jpg');
-	opacity: .3;
+	opacity: .6;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -28,7 +20,12 @@
 	color: black;
 	padding: .5rem 0;
 }
-#wording{
-	/*height: 10rem;*/
+#wordding{
+	height: 80%;
 
+}
+#wordding img {
+	height: 45rem;
+	width: 100%;
+	object-fit: cover;
 }
