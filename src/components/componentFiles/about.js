@@ -13,28 +13,32 @@ import image5 from '../../assets/images/image5.jpg';
 import image6 from '../../assets/images/image6.jpg';
 import image7 from '../../assets/images/image7.jpg';
 import image from '../../assets/images/image.jpg';
+import rose from '../../assets/images/rose.jpg';
 import '../../assets/styles/about.css';
 
 const AboutPage = () => {
 	return (
 		<React.Fragment>
 
-			<section className="img-fluid" id="prlx">
-				<div className="container-fluid">
-					<div className="wtitle text-center">
-						<h5>Creative</h5>
-						<h5>Passionate</h5>
-						<h5>Work oriented</h5>
-						
+
+			<section>
+				<div className="row container-fluid bg-light text-center">
+				
+					<div className="col-sm-6" id="wordding">
+						<img src={rose} className="img-fluid" alt="about"/>
+					</div>
+					<div className="col-sm-6 text-center py-5">
+						<h5>Meet Rose Brian</h5>
+						<p>She is your ordinary next door girl who loves God and uses her photography to showcase the beauty of God's creation. She is also a wife, mother and the lead photographer at Royal frames media. Her aim to capture your life's experiences in the most artistic and creative way possible. She seeks to journey with you as you sail through one milestone to another and ensure that a few years down the line you are able to relive those experiences through the photographs captured.</p>
 					</div>
 				</div>
 			</section>
 
 			<section>
-				<div className="row bg-light text-center container-fluid">
-					<div className="col-sm-12">
-						<h3>About us</h3>
-					<hr></hr>
+				<div className="container-fluid bg-light">
+					<div className="text-center py-3">
+						<h5>About Royalframes media</h5>
+						<hr></hr>
 					</div>
 				</div>
 			</section>
@@ -49,9 +53,8 @@ const AboutPage = () => {
 					</div>
 					<div className="col-sm-4 text-center">
 						<h5>What we do</h5>
-						<p className="fonti">We do photography We do photography We do photography</p>
-						<p className="fonti">We do photography We do photography We do photography We do photography We do photography We do photography</p>
-					</div>
+						<p className="fonti">We tell your story in an artistic way, we capture your life experiences as you go through one milestone to another creatively. We help you relive your most precious memories through photos.</p>
+						</div>
 					<div className="col-sm-4 text-center">
 						<h5>Contact info</h5>
 						<p className="fonti">
@@ -70,7 +73,7 @@ const AboutPage = () => {
 					<div className="wtitlebtm text-left">
 						<h5>We are here to deliver what you ask for,</h5>
 						<h5>In the right quality, quantity</h5>
-						<h5>and keep the smile in your heart growing</h5>
+						<h5>and keep the smiles going</h5>
 					</div>
 				</div>
 			</section>
