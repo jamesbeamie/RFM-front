@@ -7,7 +7,7 @@ const styles = {
   };
 
 const EngagementItem = (props) => (
-	<div key={props.blogId} className="col-md-4 furem" style={styles}>
+	<div key={props.blogId} className="col-md-4 col-xl-3 furem" style={styles}>
 		<img className="img-fluid picha" src={props.image_path} alt="engagemenImage"/>
 	</div>
 );
