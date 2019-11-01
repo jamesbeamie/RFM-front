@@ -9,9 +9,9 @@
 .furem {
   overflow: hidden;
   width: 30rem;
-  box-sizing: unset !important;
-  height: 15rem;
-  /* height: 10%; */
+  box-sizing: content-box !important;
+  /* height: 15rem; */
+  height: 10%;
 }
 .furem img {
   transition: all 1.5s ease;

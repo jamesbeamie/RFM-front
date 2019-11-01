@@ -4,13 +4,13 @@ import "../../../assets/styles/blogItem.css";
 const styles = {
   paddingLeft: "0",
   paddingRight: "0",
-  boxSizing: "unset ! important"
+  boxSizing: "content-box ! important"
 };
 
 const BlogItem = props => (
   <div
     key={props.blogId}
-    className='col-sm-4 col-md-3 col-lg-3 col-xl-3 furem'
+    className='col-sm-4 col-md-3 col-lg-3 col-xl-2 furem'
     style={styles}
   >
     <button
