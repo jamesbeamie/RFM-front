@@ -1,20 +1,17 @@
-.home_list-item p {
-  color: rgb(175, 172, 172);
-  padding: 5px 4px;
-  font-size: 0.5rem;
-}
 .deti {
   margin: 0;
   padding-top: 10px;
   font-size: 0.8rem;
 }
-.picha {
+/* .picha {
   margin: 5px 0;
-}
+} */
 .furem {
   overflow: hidden;
   width: 30rem;
+  box-sizing: unset !important;
   height: 15rem;
+  /* height: 10%; */
 }
 .furem img {
   transition: all 1.5s ease;
@@ -31,4 +28,5 @@
 .blog-button {
   border: white;
   background-color: white;
+  margin: 0 !important;
 }
