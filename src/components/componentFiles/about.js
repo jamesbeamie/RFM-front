@@ -1,18 +1,7 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { SocialIcon } from 'react-social-icons';
-import image1 from '../../assets/images/image1.jpg';
-import image21 from '../../assets/images/image21.jpg';
-import image2 from '../../assets/images/image2.jpg';
-import image3 from '../../assets/images/image3.jpg';
-import image31 from '../../assets/images/image31.jpg';
-import image4 from '../../assets/images/image4.jpg';
-import image5 from '../../assets/images/image5.jpg';
-import image6 from '../../assets/images/image6.jpg';
-import image7 from '../../assets/images/image7.jpg';
-import image from '../../assets/images/image.jpg';
 import rose from '../../assets/images/rose.jpg';
 import '../../assets/styles/about.css';
 
@@ -81,7 +70,7 @@ const AboutPage = () => {
 				<div className="container-fluid">
 					<div className="wtitlebtm text-center">
 						<p>
-							We are here to deliver what you ask for,In the right quality, quantityand keep the smiles
+							We are here to deliver what you ask for,In the right quality, quantity and keep the smiles
 							going.
 						</p>
 					</div>
