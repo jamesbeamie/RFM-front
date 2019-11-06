@@ -4,7 +4,7 @@ import "../../assets/styles/index.css";
 import "../../assets/styles/modal.css";
 
 const userToken = localStorage.getItem("token");
-const MyModal = props => {
+const DelModal = props => {
   return (
     <div className='MyModal'>
       <header className='MyModal_header'>
@@ -18,8 +18,8 @@ const MyModal = props => {
             close
           </button>
         )}
-        {props.canConfirm && userToken && (
-          <button className='btn' onClick={props.onConfirm}>
+        {props.canDelete && userToken && (
+          <button className='btn' onClick={props.onDelete}>
             {props.confirmText}
           </button>
         )}
@@ -28,4 +28,4 @@ const MyModal = props => {
   );
 };
 
-export default MyModal;
+export default DelModal;
