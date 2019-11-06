@@ -5,7 +5,7 @@ const styles = {
   paddingLeft: "0",
   paddingRight: "0"
 };
-
+const userToken = localStorage.getItem("token");
 const EngagementItem = props => (
   <div
     key={props.blogId}
@@ -17,6 +17,14 @@ const EngagementItem = props => (
       src={props.image_path}
       alt='engagemenImage'
     />
+    {userToken && (
+      <button
+        className='baton'
+        onClick={props.eraseEngmnt.bind(this, props.slug)}
+      >
+        delete
+      </button>
+    )}
   </div>
 );
 

@@ -5,7 +5,7 @@ const styles = {
   paddingLeft: "0",
   paddingRight: "0"
 };
-
+const userToken = localStorage.getItem("token");
 const ChildrenItem = props => (
   <div
     key={props.blogId}
@@ -13,6 +13,14 @@ const ChildrenItem = props => (
     style={styles}
   >
     <img className='img-fluid picha' src={props.image_path} alt='childImage' />
+    {userToken && (
+      <button
+        className='baton'
+        onClick={props.eraseChild.bind(this, props.slug)}
+      >
+        delete
+      </button>
+    )}
   </div>
 );
 
