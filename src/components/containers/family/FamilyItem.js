@@ -5,6 +5,7 @@ const styles = {
   paddingLeft: "0",
   paddingRight: "0"
 };
+const userToken = localStorage.getItem("token");
 const FamilyItem = props => (
   <div
     key={props.blogId}
@@ -12,6 +13,14 @@ const FamilyItem = props => (
     style={styles}
   >
     <img className='img-fluid picha' src={props.image_path} alt='familyImage' />
+    {userToken && (
+      <button
+        className='baton'
+        onClick={props.deleteFamilia.bind(this, props.slug)}
+      >
+        delete
+      </button>
+    )}
   </div>
 );
 

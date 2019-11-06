@@ -30,3 +30,19 @@
   background-color: white;
   margin: 0 !important;
 }
+.baton {
+  color: whitesmoke;
+  z-index: 100;
+  border: 1px solid rgb(68, 24, 24);
+  background-color: rgb(172, 161, 161);
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.baton:hover {
+  color: whitesmoke;
+  z-index: 100;
+  border: 1px solid rgb(68, 24, 24);
+  background-color: rgb(139, 8, 8);
+  border-radius: 5px;
+  margin-left: 5px;
+}
