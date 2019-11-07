@@ -11,6 +11,7 @@ import axios from "axios";
 import createBlogAction from "../actions/createBlog";
 import { storage } from "../../firebase";
 import Spinner from "../common/Spinner";
+import { toast } from "react-toastify";
 
 class CreateBlog extends Component {
   constructor(props) {
@@ -171,6 +172,7 @@ class CreateBlog extends Component {
     this.setState({
       creating: false
     });
+    this.fetchBlogs();
   };
 
   handleDelete = slug => {
@@ -316,6 +318,7 @@ class CreateBlog extends Component {
       if (specificBlog !== null) {
         const sluhg = specificBlog.slug;
         this.handleDelete(sluhg);
+        toast.error("Blog deleted successfuly, reload");
       }
     };
 
