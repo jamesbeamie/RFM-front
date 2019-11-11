@@ -6,13 +6,12 @@
 .furem {
   overflow: hidden;
   width: 30rem;
-  background-color: pink;
   box-sizing: content-box !important;
   /* height: 15rem; */
   height: 100%;
   /* position: absolute; */
-  top: -20px;
-  /* left: -20px; */
+  /* top: -20px; */
+  /* left: 20px; */
   /* width: calc(100% + 20px); */
 }
 .furem img {
