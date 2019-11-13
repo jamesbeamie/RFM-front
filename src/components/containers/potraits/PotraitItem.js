@@ -10,19 +10,19 @@ const PotraitItem = props => (
   <React.Fragment>
     <div
       key={props.blogId}
-      className='col-sm-4 col-md-4 col-lg-3 col-xl-3 furem'
+      className="col-sm-4 col-md-4 col-lg-3 col-xl-3 furem"
       style={styles}
     >
       <img
-        className='img-fluid picha'
+        className="img-fluid picha"
         src={props.image_path}
-        alt='potraitImage'
+        alt="potraitImage"
       />
     </div>
     <div>
       {userToken && (
         <button
-          className='baton'
+          className="baton"
           onClick={props.deletePotrait.bind(this, props.slug)}
         >
           delete

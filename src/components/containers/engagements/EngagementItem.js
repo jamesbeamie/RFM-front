@@ -7,25 +7,30 @@ const styles = {
 };
 const userToken = localStorage.getItem("token");
 const EngagementItem = props => (
-  <div
-    key={props.blogId}
-    className='col-sm-4 col-md-4 col-lg-3 col-xl-3 furem'
-    style={styles}
-  >
-    <img
-      className='img-fluid picha'
-      src={props.image_path}
-      alt='engagemenImage'
-    />
-    {userToken && (
-      <button
-        className='baton'
-        onClick={props.eraseEngmnt.bind(this, props.slug)}
-      >
-        delete
-      </button>
-    )}
-  </div>
+  <React.Fragment>
+    <div
+      key={props.blogId}
+      className="col-sm-4 col-md-4 col-lg-3 col-xl-3 furem"
+      style={styles}
+    >
+      <img
+        className="img-fluid picha"
+        src={props.image_path}
+        alt="engagemenImage"
+      />
+    </div>
+    <div>
+      {" "}
+      {userToken && (
+        <button
+          className="baton"
+          onClick={props.eraseEngmnt.bind(this, props.slug)}
+        >
+          delete
+        </button>
+      )}
+    </div>
+  </React.Fragment>
 );
 
 export default EngagementItem;
