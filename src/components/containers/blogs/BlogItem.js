@@ -10,14 +10,14 @@ const styles = {
 const BlogItem = props => (
   <div
     key={props.blogId}
-    className='col-sm-4 col-md-3 col-lg-3 col-xl-2 furem'
+    className="col-sm-4 col-md-3 col-lg-3 col-xl-4 furem"
     style={styles}
   >
     <button
-      className='blog-button'
+      className="blog-button"
       onClick={props.specificBlog.bind(this, props.slug)}
     >
-      <img className='img-fluid' src={props.image_path} alt='blogImage' />
+      <img className="img-fluid" src={props.image_path} alt="blogImage" />
     </button>
   </div>
 );
