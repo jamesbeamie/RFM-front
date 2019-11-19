@@ -9,6 +9,7 @@ const DelModal = props => {
     <div className='MyModal'>
       <header className='MyModal_header'>
         <h1>{props.title}</h1>
+        <hr />
         {userToken && <p className='tagi'>tag:{props.tag}</p>}
       </header>
       <section className='MyModal_content'>{props.children}</section>
