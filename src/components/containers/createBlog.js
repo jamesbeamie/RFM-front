@@ -327,9 +327,9 @@ class CreateBlog extends Component {
       return (
         <img
           key={moja.slug}
-          className="img-fluid my-2"
+          className='img-fluid my-2'
           src={moja}
-          alt="blogImage"
+          alt='blogImage'
         />
       );
     });
@@ -338,58 +338,58 @@ class CreateBlog extends Component {
         {(creating || specificBlog) && <Backdrop />}
         {creating && (
           <MyModal
-            title="Create blog"
+            title='Create blog'
             canCancel
             canConfirm
             onCancel={this.handleCancel}
             onConfirm={this.handleConfirm}
-            confirmText="Post"
+            confirmText='Post'
           >
             <form>
-              <progress value={progress} max="100" />
-              <div className="form-ctrl">
-                <label htmlFor="title">Title</label>
+              <progress value={progress} max='100' />
+              <div className='form-ctrl'>
+                <label htmlFor='title'>Title</label>
                 <input
-                  placeholder="Title here"
-                  type="text"
-                  name="title"
+                  placeholder='Title here'
+                  type='text'
+                  name='title'
                   onChange={this.onChange}
                   value={this.state.title}
                 />
               </div>
-              <div className="form-ctrl">
-                <label htmlFor="tag">tag</label>
+              <div className='form-ctrl'>
+                <label htmlFor='tag'>tag</label>
                 <input
-                  placeholder="tag here"
-                  type="text"
-                  name="tag"
+                  placeholder='tag here'
+                  type='text'
+                  name='tag'
                   onChange={this.onChange}
                   value={this.state.tag}
                 />
               </div>
-              <div className="form-ctrl">
-                <label htmlFor="description">describe</label>
+              <div className='form-ctrl'>
+                <label htmlFor='description'>describe</label>
                 <input
-                  type="text"
-                  name="description"
+                  type='text'
+                  name='description'
                   onChange={this.onChange}
                   value={this.state.description}
                 />
               </div>
-              <div className="form-ctrl">
-                <label htmlFor="body">Body</label>
+              <div className='form-ctrl'>
+                <label htmlFor='body'>Body</label>
                 <textarea
-                  placeholder="300 words max"
-                  name="body"
+                  placeholder='300 words max'
+                  name='body'
                   onChange={this.onChange}
                   value={this.state.body}
-                  maxLength="500"
+                  maxLength='500'
                 />
               </div>
-              <div className="form-ctrl">
-                <label htmlFor="image">Image</label>
-                <input type="file" onChange={this.handleImage} />
-                <button className="btn" onClick={this.handleUpload}>
+              <div className='form-ctrl'>
+                <label htmlFor='image'>Image</label>
+                <input type='file' onChange={this.handleImage} />
+                <button className='btn' onClick={this.handleUpload}>
                   Upload
                 </button>
               </div>
@@ -404,47 +404,42 @@ class CreateBlog extends Component {
             canDelete
             onCancel={this.handleCancel}
             onDelete={deletion}
-            confirmText="Delete"
+            confirmText='Delete'
           >
-            <div className="container ">
-              <div className="row">
-                <div className="col-md-12 text-center fonti">
-                  <p className="text-center">{specificBlog.description}</p>
-                  <p className="text-center">{specificBlog.body}</p>
+            <div className='container '>
+              <div className='row'>
+                <div className='col-md-12 text-center fonti'>
+                  <p className='text-center'>{specificBlog.body}</p>
 
-                  <p className="deti">
+                  <p className='deti'>
                     Created:{" "}
                     {new Date(specificBlog.created_at).toLocaleDateString()}
                   </p>
-                  <p className="deti">
-                    updated:{" "}
-                    {new Date(specificBlog.updated_at).toLocaleDateString()}
-                  </p>
                 </div>
-                <div className="col-md-12">
+                <div className='col-md-12'>
                   <img
-                    className="img-fluid"
+                    className='img-fluid'
                     src={specificBlog.image_path}
-                    alt="blogImage"
+                    alt='blogImage'
                   />
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-12 my-2">{picha}</div>
+              <div className='row'>
+                <div className='col-md-12 my-2'>{picha}</div>
               </div>
             </div>
           </DelModal>
         )}
         {userToken && (
-          <div className="hom-ctrl">
+          <div className='hom-ctrl'>
             <h4>Create Blog</h4>
-            <button className="btn" onClick={this.handleCreateBlog}>
+            <button className='btn' onClick={this.handleCreateBlog}>
               {" "}
               Click to create
             </button>
           </div>
         )}
-        <div className="">
+        <div className=''>
           {isLoading ? (
             <Spinner />
           ) : (
