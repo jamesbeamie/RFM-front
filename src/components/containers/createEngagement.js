@@ -102,7 +102,7 @@ class CreateEngagement extends Component {
   handleDelete = slug => {
     axios
       .delete(
-        `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/engagements/${slug}`
+        `https://rfm-app.herokuapp.com/photography/royalframesmedia/engagements/${slug}`
       )
       .then(() => {
         this.fetchEngagements();
@@ -130,7 +130,7 @@ class CreateEngagement extends Component {
     // acces api
     axios
       .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/engagements/"
+        "https://rfm-app.herokuapp.com/photography/royalframesmedia/engagements/"
       )
       .then(response => {
         const blogs = response.data.results;

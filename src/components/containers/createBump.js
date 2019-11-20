@@ -113,7 +113,7 @@ class CreateBump extends Component {
   handleDelete = slug => {
     axios
       .delete(
-        `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/bump/${slug}`
+        `https://rfm-app.herokuapp.com/photography/royalframesmedia/bump/${slug}`
       )
       .then(() => {
         this.fetchBumps();
@@ -129,7 +129,7 @@ class CreateBump extends Component {
     // acces api
     axios
       .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/bump/"
+        "https://rfm-app.herokuapp.com/photography/royalframesmedia/bump/"
       )
       .then(response => {
         const blogs = response.data.results;
