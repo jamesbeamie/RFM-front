@@ -102,7 +102,7 @@ class CreateChild extends Component {
   handleDelete = slug => {
     axios
       .delete(
-        `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/children/${slug}`
+        `https://rfm-app.herokuapp.com/photography/royalframesmedia/children/${slug}`
       )
       .then(() => {
         this.fetchChildren();
@@ -130,7 +130,7 @@ class CreateChild extends Component {
     // acces api
     axios
       .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/children"
+        "https://rfm-app.herokuapp.com/photography/royalframesmedia/children"
       )
       .then(response => {
         const blogs = response.data.results;

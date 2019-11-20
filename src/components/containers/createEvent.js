@@ -93,7 +93,7 @@ class CreateEvent extends Component {
   handleDelete = slug => {
     axios
       .delete(
-        `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events/${slug}`
+        `https://rfm-app.herokuapp.com/photography/royalframesmedia/events/${slug}`
       )
       .then(() => {
         this.fetchEvent();
@@ -115,10 +115,10 @@ class CreateEvent extends Component {
   handleConfirm = event => {
     event.preventDefault();
     const { title, image } = this.state;
-    const bumpData = { title, image };
+    const eventData = { title, image };
 
     // eslint-disable-next-line react/prop-types
-    this.props.uploadFamilyAction(bumpData);
+    this.props.uploadEventAction(eventData);
     this.setState({
       creating: false
     });
@@ -129,9 +129,7 @@ class CreateEvent extends Component {
 
     // acces api
     axios
-      .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events"
-      )
+      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/events")
       .then(response => {
         const events = response.data.results;
         this.setState({

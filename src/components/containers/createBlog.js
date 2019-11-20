@@ -24,6 +24,7 @@ class CreateBlog extends Component {
       engagementArray: [],
       familyArray: [],
       potraitArray: [],
+      eventArray: [],
       isLoading: false,
       specificBlog: null,
       title: "",
@@ -138,7 +139,8 @@ class CreateBlog extends Component {
       childrenArray,
       engagementArray,
       familyArray,
-      potraitArray
+      potraitArray,
+      eventArray
     } = this.state;
     let allImages = [];
     bumpArray.map(moja => {
@@ -154,6 +156,9 @@ class CreateBlog extends Component {
       allImages.push(moja);
     });
     potraitArray.map(moja => {
+      allImages.push(moja);
+    });
+    eventArray.map(moja => {
       allImages.push(moja);
     });
     console.log("fotosy", allImages);
@@ -178,7 +183,7 @@ class CreateBlog extends Component {
   handleDelete = slug => {
     axios
       .delete(
-        `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/blog/${slug}`
+        `https://rfm-app.herokuapp.com/photography/royalframesmedia/blog/${slug}`
       )
       .then(() => {
         this.fetchBlogs();
@@ -193,9 +198,7 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/blog/"
-      )
+      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/blog/")
       .then(response => {
         const blogs = response.data.results;
         this.setState({
@@ -212,9 +215,7 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/bump/"
-      )
+      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/bump/")
       .then(response => {
         const blogs = response.data.results;
         this.setState({
@@ -232,7 +233,7 @@ class CreateBlog extends Component {
     // acces api
     axios
       .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/children"
+        "https://rfm-app.herokuapp.com/photography/royalframesmedia/children"
       )
       .then(response => {
         const blogs = response.data.results;
@@ -251,7 +252,7 @@ class CreateBlog extends Component {
     // acces api
     axios
       .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/engagements/"
+        "https://rfm-app.herokuapp.com/photography/royalframesmedia/engagements/"
       )
       .then(response => {
         const blogs = response.data.results;
@@ -269,9 +270,7 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/family"
-      )
+      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/family")
       .then(response => {
         const blogs = response.data.results;
         this.setState({
@@ -289,12 +288,30 @@ class CreateBlog extends Component {
     // acces api
     axios
       .get(
-        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/potraits/"
+        "https://rfm-app.herokuapp.com/photography/royalframesmedia/potraits/"
       )
       .then(response => {
         const blogs = response.data.results;
         this.setState({
           potraitArray: blogs,
+          isLoading: false
+        });
+      })
+      .catch(err => {
+        throw err;
+      });
+  };
+
+  fetchEvents = () => {
+    this.setState({ isLoading: true });
+
+    // acces api
+    axios
+      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/events")
+      .then(response => {
+        const events = response.data.results;
+        this.setState({
+          eventArray: events,
           isLoading: false
         });
       })
