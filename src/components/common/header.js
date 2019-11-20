@@ -67,6 +67,11 @@ class Header extends React.Component {
                 BUMPS
               </NavLink>
             </li>
+            <li className='nav-item'>
+              <NavLink className='nav-link linki' to='/events' exact>
+                EVENTS
+              </NavLink>
+            </li>
             {userToken && (
               <li className='nav-item'>
                 <NavLink
