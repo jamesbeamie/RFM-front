@@ -55,6 +55,7 @@ class CreateBlog extends Component {
     this.fetchEngagements();
     this.fetchFamily();
     this.fetchPotraits();
+    this.fetchEvents();
     setTimeout(() => {
       this.pickImage();
     }, 1500);
