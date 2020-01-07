@@ -28,7 +28,7 @@ class PwdReset extends Component {
 
 		// acces api
 		axios
-			.patch('https://rfm-app.herokuapp.com/photography/royalframesmedia/users/password_reset/', requestBody)
+			.patch('https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/users/password_reset/', requestBody)
 			.then((response) => {
 				return response;
 			})

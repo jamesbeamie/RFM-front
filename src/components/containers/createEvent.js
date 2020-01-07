@@ -93,7 +93,7 @@ class CreateEvent extends Component {
   handleDelete = slug => {
     axios
       .delete(
-        `https://rfm-app.herokuapp.com/photography/royalframesmedia/events/${slug}`
+        `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events/${slug}`
       )
       .then(() => {
         this.fetchEvent();
@@ -129,7 +129,7 @@ class CreateEvent extends Component {
 
     // acces api
     axios
-      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/events")
+      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events")
       .then(response => {
         const events = response.data.results;
         this.setState({

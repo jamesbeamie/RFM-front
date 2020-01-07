@@ -184,7 +184,7 @@ class CreateBlog extends Component {
   handleDelete = slug => {
     axios
       .delete(
-        `https://rfm-app.herokuapp.com/photography/royalframesmedia/blog/${slug}`
+        `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/blog/${slug}`
       )
       .then(() => {
         this.fetchBlogs();
@@ -199,7 +199,7 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/blog/")
+      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/blog/")
       .then(response => {
         const blogs = response.data.results;
         this.setState({
@@ -216,7 +216,7 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/bump/")
+      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/bump/")
       .then(response => {
         const blogs = response.data.results;
         this.setState({
@@ -234,7 +234,7 @@ class CreateBlog extends Component {
     // acces api
     axios
       .get(
-        "https://rfm-app.herokuapp.com/photography/royalframesmedia/children"
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/children"
       )
       .then(response => {
         const blogs = response.data.results;
@@ -253,7 +253,7 @@ class CreateBlog extends Component {
     // acces api
     axios
       .get(
-        "https://rfm-app.herokuapp.com/photography/royalframesmedia/engagements/"
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/engagements/"
       )
       .then(response => {
         const blogs = response.data.results;
@@ -271,7 +271,7 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/family")
+      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/family")
       .then(response => {
         const blogs = response.data.results;
         this.setState({
@@ -289,7 +289,7 @@ class CreateBlog extends Component {
     // acces api
     axios
       .get(
-        "https://rfm-app.herokuapp.com/photography/royalframesmedia/potraits/"
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/potraits/"
       )
       .then(response => {
         const blogs = response.data.results;
@@ -308,7 +308,7 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get("https://rfm-app.herokuapp.com/photography/royalframesmedia/events")
+      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events")
       .then(response => {
         const events = response.data.results;
         this.setState({

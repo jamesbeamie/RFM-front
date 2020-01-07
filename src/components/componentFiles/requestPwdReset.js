@@ -22,7 +22,7 @@ class ResetRequest extends Component {
 		};
 		// acces api
 		axios
-			.post('https://rfm-app.herokuapp.com/photography/royalframesmedia/users/password_request/', requestBody)
+			.post('https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/users/password_request/', requestBody)
 			.then((response) => {
 				return response;
 			})

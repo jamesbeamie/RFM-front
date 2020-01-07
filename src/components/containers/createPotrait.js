@@ -102,7 +102,7 @@ class CreatePotrait extends Component {
   handleDelete = slug => {
     axios
       .delete(
-        `https://rfm-app.herokuapp.com/photography/royalframesmedia/potraits/${slug}`
+        `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/potraits/${slug}`
       )
       .then(() => {
         this.fetchPotraits();
@@ -130,7 +130,7 @@ class CreatePotrait extends Component {
     // acces api
     axios
       .get(
-        "https://rfm-app.herokuapp.com/photography/royalframesmedia/potraits/"
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/potraits/"
       )
       .then(response => {
         const blogs = response.data.results;
