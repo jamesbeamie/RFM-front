@@ -7,8 +7,8 @@ import Backdrop from "../common/backdrop";
 import PotraitList from "./potraits/PotraitList";
 import axios from "axios";
 import uploadPotraitAction from "../actions/uploadPotrait";
-import { storage } from "../../firebase";
 import Spinner from "../common/Spinner";
+import { storage } from "../../firebase";
 
 class CreatePotrait extends Component {
   constructor(props) {
@@ -42,47 +42,6 @@ class CreatePotrait extends Component {
     });
   };
 
-  handleImage = e => {
-    if (e.target.files[0]) {
-      const image = e.target.files[0];
-      this.setState({
-        image
-      });
-    }
-  };
-
-  handleUpload = e => {
-    e.preventDefault();
-    const { image } = this.state;
-    const uploadTask = storage.ref(`images/${image.name}`).put(image);
-    uploadTask.on(
-      "state_changed",
-      snapshot => {
-        // shows progress %
-        const progressBar = Math.round(
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        );
-        this.setState({
-          progress: progressBar
-        });
-      },
-      error => {
-        return error;
-      },
-      () => {
-        // returns completion of upload
-        storage
-          .ref("images")
-          .child(image.name)
-          .getDownloadURL()
-          .then(url => {
-            this.setState({
-              image: url
-            });
-          });
-      }
-    );
-  };
   handleCancel = () => {
     this.setState({
       creating: false,
@@ -142,6 +101,48 @@ class CreatePotrait extends Component {
       .catch(err => {
         throw err;
       });
+  };
+
+  handleImage = e => {
+    if (e.target.files[0]) {
+      const image = e.target.files[0];
+      this.setState({
+        image
+      });
+    }
+  };
+
+  handleUpload = e => {
+    e.preventDefault();
+    const { image } = this.state;
+    const uploadTask = storage.ref(`images/${image.name}`).put(image);
+    uploadTask.on(
+      "state_changed",
+      snapshot => {
+        // shows progress %
+        const progressBar = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        this.setState({
+          progress: progressBar
+        });
+      },
+      error => {
+        return error;
+      },
+      () => {
+        // returns completion of upload
+        storage
+          .ref("images")
+          .child(image.name)
+          .getDownloadURL()
+          .then(url => {
+            this.setState({
+              image: url
+            });
+          });
+      }
+    );
   };
   render() {
     const {
@@ -228,7 +229,4 @@ class CreatePotrait extends Component {
 const mapStateToProps = state => ({
   newPotrait: state.potraitReducer.newPotrait
 });
-export default connect(
-  mapStateToProps,
-  { uploadPotraitAction }
-)(CreatePotrait);
+export default connect(mapStateToProps, { uploadPotraitAction })(CreatePotrait);
