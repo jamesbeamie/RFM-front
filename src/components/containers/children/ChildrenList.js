@@ -3,10 +3,10 @@ import React from "react";
 import ChildrenItem from "./ChildrenItem";
 import "../../../assets/styles/blogList.css";
 
-const ChildrenList = props => {
+const ChildrenList = (props) => {
   // can also use () then call this.props
   const eraseFunction = props.removeChild;
-  const fetchedChildren = props.childrens.map(toto => {
+  const fetchedChildren = props.childrens.map((toto) => {
     return (
       <ChildrenItem
         key={toto.id}
@@ -17,7 +17,11 @@ const ChildrenList = props => {
       />
     );
   });
-  return <div className='row'>{fetchedChildren}</div>;
+  return (
+    <div className='row' id='header-space'>
+      {fetchedChildren}
+    </div>
+  );
 };
 
 export default ChildrenList;

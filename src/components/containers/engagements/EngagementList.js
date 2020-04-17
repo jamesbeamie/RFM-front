@@ -3,10 +3,10 @@ import React from "react";
 import EngagementItem from "./EngagementItem";
 import "../../../assets/styles/blogList.css";
 
-const EngagementList = props => {
+const EngagementList = (props) => {
   // can also use () then call this.props
   const eraseFunction = props.deleteEngagement;
-  const fetchedEngagements = props.engagements.map(engamnt => {
+  const fetchedEngagements = props.engagements.map((engamnt) => {
     return (
       <EngagementItem
         key={engamnt.id}
@@ -17,7 +17,11 @@ const EngagementList = props => {
       />
     );
   });
-  return <div className='row'>{fetchedEngagements}</div>;
+  return (
+    <div className='row' id='header-space'>
+      {fetchedEngagements}
+    </div>
+  );
 };
 
 export default EngagementList;

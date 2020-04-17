@@ -3,8 +3,8 @@ import React from "react";
 import BlogItem from "./BlogItem";
 import "../../../assets/styles/blogList.css";
 
-const BlogList = props => {
-  const fetchedBlogs = props.blogs.map(blog => {
+const BlogList = (props) => {
+  const fetchedBlogs = props.blogs.map((blog) => {
     return (
       <BlogItem
         key={blog.id}
@@ -21,7 +21,11 @@ const BlogList = props => {
       />
     );
   });
-  return <div className='row'>{fetchedBlogs}</div>;
+  return (
+    <div className='row' id='header-space'>
+      {fetchedBlogs}
+    </div>
+  );
 };
 
 export default BlogList;

@@ -12,6 +12,7 @@ import createBlogAction from "../actions/createBlog";
 import { storage } from "../../firebase";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
+import Header from "../common/header";
 
 class CreateBlog extends Component {
   constructor(props) {
@@ -35,16 +36,16 @@ class CreateBlog extends Component {
       url: "",
       mapicha: [],
       blogImages: [],
-      progress: 0
+      progress: 0,
     };
 
     this.handleUpload = this.handleUpload.bind(this);
   }
 
-  onChange = e => {
+  onChange = (e) => {
     e.preventDefault();
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -63,35 +64,35 @@ class CreateBlog extends Component {
 
   handleCreateBlog = () => {
     this.setState({
-      creating: true
+      creating: true,
     });
   };
 
-  handleImage = e => {
+  handleImage = (e) => {
     if (e.target.files[0]) {
       const image = e.target.files[0];
       this.setState({
-        image
+        image,
       });
     }
   };
 
-  handleUpload = e => {
+  handleUpload = (e) => {
     e.preventDefault();
     const { image } = this.state;
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
     uploadTask.on(
       "state_changed",
-      snapshot => {
+      (snapshot) => {
         // shows progress %
         const progressBar = Math.round(
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
         this.setState({
-          progress: progressBar
+          progress: progressBar,
         });
       },
-      error => {
+      (error) => {
         return error;
       },
       () => {
@@ -100,9 +101,9 @@ class CreateBlog extends Component {
           .ref("images")
           .child(image.name)
           .getDownloadURL()
-          .then(url => {
+          .then((url) => {
             this.setState({
-              image: url
+              image: url,
             });
           });
       }
@@ -111,26 +112,26 @@ class CreateBlog extends Component {
   handleCancel = () => {
     this.setState({
       creating: false,
-      specificBlog: null
+      specificBlog: null,
     });
     this.fetchBlogs();
   };
 
-  showBlogDetails = slug => {
+  showBlogDetails = (slug) => {
     const { blogArray, mapicha } = this.state;
     let foundImages = [];
-    mapicha.map(moja => {
+    mapicha.map((moja) => {
       if (moja.title === slug) {
         foundImages.push(moja.image_path);
         this.setState({
-          blogImages: foundImages
+          blogImages: foundImages,
         });
       }
     });
 
-    const selectedBlog = blogArray.find(blog => blog.slug === slug);
+    const selectedBlog = blogArray.find((blog) => blog.slug === slug);
     this.setState({
-      specificBlog: selectedBlog
+      specificBlog: selectedBlog,
     });
   };
 
@@ -141,34 +142,34 @@ class CreateBlog extends Component {
       engagementArray,
       familyArray,
       potraitArray,
-      eventArray
+      eventArray,
     } = this.state;
     let allImages = [];
-    bumpArray.map(moja => {
+    bumpArray.map((moja) => {
       allImages.push(moja);
     });
-    childrenArray.map(moja => {
+    childrenArray.map((moja) => {
       allImages.push(moja);
     });
-    engagementArray.map(moja => {
+    engagementArray.map((moja) => {
       allImages.push(moja);
     });
-    familyArray.map(moja => {
+    familyArray.map((moja) => {
       allImages.push(moja);
     });
-    potraitArray.map(moja => {
+    potraitArray.map((moja) => {
       allImages.push(moja);
     });
-    eventArray.map(moja => {
+    eventArray.map((moja) => {
       allImages.push(moja);
     });
     console.log("fotosy", allImages);
     this.setState({
-      mapicha: allImages
+      mapicha: allImages,
     });
   };
 
-  handleConfirm = event => {
+  handleConfirm = (event) => {
     event.preventDefault();
     const { title, tag, description, body, image } = this.state;
     const blogData = { title, tag, description, body, image };
@@ -176,12 +177,12 @@ class CreateBlog extends Component {
     // eslint-disable-next-line react/prop-types
     this.props.createBlogAction(blogData);
     this.setState({
-      creating: false
+      creating: false,
     });
     this.fetchBlogs();
   };
 
-  handleDelete = slug => {
+  handleDelete = (slug) => {
     axios
       .delete(
         `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/blog/${slug}`
@@ -189,7 +190,7 @@ class CreateBlog extends Component {
       .then(() => {
         this.fetchBlogs();
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
@@ -199,15 +200,17 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/blog/")
-      .then(response => {
+      .get(
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/blog/"
+      )
+      .then((response) => {
         const blogs = response.data.results;
         this.setState({
           blogArray: blogs,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
@@ -216,15 +219,17 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/bump/")
-      .then(response => {
+      .get(
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/bump/"
+      )
+      .then((response) => {
         const blogs = response.data.results;
         this.setState({
           bumpArray: blogs,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
@@ -236,14 +241,14 @@ class CreateBlog extends Component {
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/children"
       )
-      .then(response => {
+      .then((response) => {
         const blogs = response.data.results;
         this.setState({
           childrenArray: blogs,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
@@ -255,14 +260,14 @@ class CreateBlog extends Component {
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/engagements/"
       )
-      .then(response => {
+      .then((response) => {
         const blogs = response.data.results;
         this.setState({
           engagementArray: blogs,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
@@ -271,15 +276,17 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/family")
-      .then(response => {
+      .get(
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/family"
+      )
+      .then((response) => {
         const blogs = response.data.results;
         this.setState({
           familyArray: blogs,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
@@ -291,14 +298,14 @@ class CreateBlog extends Component {
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/potraits/"
       )
-      .then(response => {
+      .then((response) => {
         const blogs = response.data.results;
         this.setState({
           potraitArray: blogs,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
@@ -308,15 +315,17 @@ class CreateBlog extends Component {
 
     // acces api
     axios
-      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events")
-      .then(response => {
+      .get(
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events"
+      )
+      .then((response) => {
         const events = response.data.results;
         this.setState({
           eventArray: events,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
@@ -328,7 +337,7 @@ class CreateBlog extends Component {
       progress,
       blogImages,
       isLoading,
-      specificBlog
+      specificBlog,
     } = this.state;
     const userToken = localStorage.getItem("token");
 
@@ -341,7 +350,7 @@ class CreateBlog extends Component {
       }
     };
 
-    const picha = blogImages.map(moja => {
+    const picha = blogImages.map((moja) => {
       return (
         <img
           key={moja.slug}
@@ -353,6 +362,7 @@ class CreateBlog extends Component {
     });
     return (
       <React.Fragment>
+        <Header />
         {(creating || specificBlog) && <Backdrop />}
         {creating && (
           <MyModal
@@ -470,10 +480,10 @@ class CreateBlog extends Component {
 }
 CreateBlog.defaultProps = {
   newBlog: PropTypes.object,
-  createBlogAction: PropTypes.func
+  createBlogAction: PropTypes.func,
 };
 
-const mapStateToProps = state => ({
-  newBlog: state.blogReducer.newBlog
+const mapStateToProps = (state) => ({
+  newBlog: state.blogReducer.newBlog,
 });
 export default connect(mapStateToProps, { createBlogAction })(CreateBlog);

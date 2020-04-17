@@ -20,7 +20,7 @@ const App = () => {
   const userToken = localStorage.getItem("token");
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Switch>
         <Route exact path='/' component={HomePage} />
         {!userToken && <Route path='/signup' component={AuthPage} />}

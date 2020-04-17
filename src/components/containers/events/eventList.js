@@ -3,10 +3,10 @@ import React from "react";
 import EventItem from "./eventItem";
 import "../../../assets/styles/blogList.css";
 
-const EventList = props => {
+const EventList = (props) => {
   // can also use () then call this.props
   const eraseFunction = props.deleteEvent;
-  const fetchedEvents = props.maevent.map(kaevent => {
+  const fetchedEvents = props.maevent.map((kaevent) => {
     return (
       <EventItem
         key={kaevent.id}
@@ -17,7 +17,11 @@ const EventList = props => {
       />
     );
   });
-  return <div className='row'>{fetchedEvents}</div>;
+  return (
+    <div className='row' id='header-space'>
+      {fetchedEvents}
+    </div>
+  );
 };
 
 export default EventList;

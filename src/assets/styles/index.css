@@ -1,93 +1,92 @@
 #app {
-	max-width: 100%;
-	margin-top: 80px;
-	font-family: "verdana";
-	padding-bottom: 0 !important;
-	margin-bottom: 0 !important;
+  max-width: 100%;
+  font-family: "Nunito", sans-serif;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 nav {
-	padding: 20px 0 20px 0;
+  padding: 20px 0 20px 0;
 }
 .btn {
-	color: purple;
-	background-color: whitesmoke;
-	font: inherit;
-	border: 1px solid rgb(4, 68, 4);
-	border-radius: 3px;
-	margin-right: 1rem;
-	box-shadow: 3px 3px 5px rgb(168, 73, 152);
+  color: purple;
+  background-color: whitesmoke;
+  font: inherit;
+  border: 1px solid rgb(4, 68, 4);
+  border-radius: 3px;
+  margin-right: 1rem;
+  box-shadow: 3px 3px 5px rgb(168, 73, 152);
 }
 .auth-form {
-	width: 25rem;
-	max-width: 80%;
-	margin: 13rem auto;
+  width: 25rem;
+  max-width: 80%;
+  margin: 13rem auto;
 }
 .form-ctrl label,
 .form-ctrl input,
 .form-ctrl textarea {
-	color: rgb(108, 5, 131);
-	width: 100%;
-	display: block;
+  color: rgb(108, 5, 131);
+  width: 100%;
+  display: block;
 }
 .form-ctrl input,
 .form-ctrl textarea {
-	border: 1px solid rgb(108, 5, 131);
-	border-radius: 2px;
+  border: 1px solid rgb(108, 5, 131);
+  border-radius: 2px;
 }
 .form-ctrl input:active {
-	outline: none;
-	border: 1px solid rgb(108, 5, 131);
-	border-radius: 2px;
+  outline: none;
+  border: 1px solid rgb(108, 5, 131);
+  border-radius: 2px;
 }
 .form-axon button {
-	margin-top: 10px;
-	margin-right: 1rem;
-	padding: 3px;
-	border-radius: 4px;
-	color: purple;
-	background-color: rgb(166, 111, 179);
-	font: inherit;
-	border: 1px solid rgb(230, 202, 236);
-	box-shadow: 3px 3px 5px rgb(108, 5, 131);
+  margin-top: 10px;
+  margin-right: 1rem;
+  padding: 3px;
+  border-radius: 4px;
+  color: purple;
+  background-color: rgb(166, 111, 179);
+  font: inherit;
+  border: 1px solid rgb(230, 202, 236);
+  box-shadow: 3px 3px 5px rgb(108, 5, 131);
 }
 .form-axon button:hover {
-	margin-top: 10px;
-	margin-right: 1rem;
-	padding: 3px;
-	border-radius: 4px;
-	color: rgb(43, 2, 43);
-	background-color: whitesmoke;
-	font: inherit;
-	border: 1px solid rgb(150, 113, 158);
-	box-shadow: 4px 3px 7px rgb(3, 21, 41);
+  margin-top: 10px;
+  margin-right: 1rem;
+  padding: 3px;
+  border-radius: 4px;
+  color: rgb(43, 2, 43);
+  background-color: whitesmoke;
+  font: inherit;
+  border: 1px solid rgb(150, 113, 158);
+  box-shadow: 4px 3px 7px rgb(3, 21, 41);
 }
 .form-axon a {
-	color: rgb(66, 41, 71);
-	text-decoration: none;
+  color: rgb(66, 41, 71);
+  text-decoration: none;
 }
 .form-axon a:hover {
-	color: rgb(193, 53, 224);
+  color: rgb(193, 53, 224);
 }
 .btn {
-	margin-top: 10px;
-	margin-right: 1rem;
-	padding: 3px;
-	border-radius: 4px;
-	color: purple;
-	background-color: whitesmoke;
-	font: inherit;
-	border: 1px solid rgb(108, 5, 131);
-	box-shadow: 3px 3px 5px rgb(108, 5, 131);
+  margin-top: 10px;
+  margin-right: 1rem;
+  padding: 3px;
+  border-radius: 4px;
+  color: purple;
+  background-color: whitesmoke;
+  font: inherit;
+  border: 1px solid rgb(108, 5, 131);
+  box-shadow: 3px 3px 5px rgb(108, 5, 131);
 }
 .btn:hover {
-	margin-top: 10px;
-	margin-right: 1rem;
-	padding: 3px;
-	border-radius: 4px;
-	color: rgb(20, 2, 20);
-	background-color: whitesmoke;
-	font: inherit;
-	border: 1px solid rgb(108, 5, 131);
-	box-shadow: 5px 5px 7px rgb(108, 5, 131);
+  margin-top: 10px;
+  margin-right: 1rem;
+  padding: 3px;
+  border-radius: 4px;
+  color: rgb(20, 2, 20);
+  background-color: whitesmoke;
+  font: inherit;
+  border: 1px solid rgb(108, 5, 131);
+  box-shadow: 5px 5px 7px rgb(108, 5, 131);
 }

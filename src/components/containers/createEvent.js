@@ -9,6 +9,7 @@ import axios from "axios";
 import uploadEventAction from "../actions/uploadEvent";
 import { storage } from "../../firebase";
 import Spinner from "../common/Spinner";
+import Header from "../common/header";
 
 class CreateEvent extends Component {
   constructor(props) {
@@ -19,16 +20,16 @@ class CreateEvent extends Component {
       isLoading: false,
       specificEvent: null,
       image: "",
-      progress: 0
+      progress: 0,
     };
 
     this.handleUpload = this.handleUpload.bind(this);
   }
 
-  onChange = e => {
+  onChange = (e) => {
     e.preventDefault();
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -38,35 +39,35 @@ class CreateEvent extends Component {
 
   handleCreateEvent = () => {
     this.setState({
-      creating: true
+      creating: true,
     });
   };
 
-  handleImage = e => {
+  handleImage = (e) => {
     if (e.target.files[0]) {
       const image = e.target.files[0];
       this.setState({
-        image
+        image,
       });
     }
   };
 
-  handleUpload = e => {
+  handleUpload = (e) => {
     e.preventDefault();
     const { image } = this.state;
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
     uploadTask.on(
       "state_changed",
-      snapshot => {
+      (snapshot) => {
         // shows progress %
         const progressBar = Math.round(
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
         this.setState({
-          progress: progressBar
+          progress: progressBar,
         });
       },
-      error => {
+      (error) => {
         return error;
       },
       () => {
@@ -75,9 +76,9 @@ class CreateEvent extends Component {
           .ref("images")
           .child(image.name)
           .getDownloadURL()
-          .then(url => {
+          .then((url) => {
             this.setState({
-              image: url
+              image: url,
             });
           });
       }
@@ -86,11 +87,11 @@ class CreateEvent extends Component {
   handleCancel = () => {
     this.setState({
       creating: false,
-      specificEvent: null
+      specificEvent: null,
     });
   };
 
-  handleDelete = slug => {
+  handleDelete = (slug) => {
     axios
       .delete(
         `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events/${slug}`
@@ -98,21 +99,21 @@ class CreateEvent extends Component {
       .then(() => {
         this.fetchEvent();
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
 
-  showEventDetails = eventId => {
-    this.setState(prevState => {
+  showEventDetails = (eventId) => {
+    this.setState((prevState) => {
       const selectedEvent = prevState.eventArray.find(
-        event => event._id === eventId
+        (event) => event._id === eventId
       );
       return { specificEvent: selectedEvent };
     });
   };
 
-  handleConfirm = event => {
+  handleConfirm = (event) => {
     event.preventDefault();
     const { title, image } = this.state;
     const eventData = { title, image };
@@ -120,7 +121,7 @@ class CreateEvent extends Component {
     // eslint-disable-next-line react/prop-types
     this.props.uploadEventAction(eventData);
     this.setState({
-      creating: false
+      creating: false,
     });
   };
 
@@ -129,15 +130,17 @@ class CreateEvent extends Component {
 
     // acces api
     axios
-      .get("https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events")
-      .then(response => {
+      .get(
+        "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events"
+      )
+      .then((response) => {
         const events = response.data.results;
         this.setState({
           eventArray: events,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         return err;
       });
   };
@@ -147,11 +150,12 @@ class CreateEvent extends Component {
       eventArray,
       isLoading,
       specificEvent,
-      progress
+      progress,
     } = this.state;
     const userToken = localStorage.getItem("token");
     return (
       <React.Fragment>
+        <Header />
         {(creating || specificEvent) && <Backdrop />}
         {creating && (
           <MyModal
@@ -223,7 +227,7 @@ class CreateEvent extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  event: state.eventReducer.newEvent
+const mapStateToProps = (state) => ({
+  event: state.eventReducer.newEvent,
 });
 export default connect(mapStateToProps, { uploadEventAction })(CreateEvent);

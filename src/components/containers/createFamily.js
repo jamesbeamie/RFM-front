@@ -9,6 +9,7 @@ import axios from "axios";
 import uploadFamilyAction from "../actions/uploadFamily";
 import { storage } from "../../firebase";
 import Spinner from "../common/Spinner";
+import Header from "../common/header";
 
 class CreateBump extends Component {
   constructor(props) {
@@ -19,16 +20,16 @@ class CreateBump extends Component {
       isLoading: false,
       specificBlog: null,
       image: "",
-      progress: 0
+      progress: 0,
     };
 
     this.handleUpload = this.handleUpload.bind(this);
   }
 
-  onChange = e => {
+  onChange = (e) => {
     e.preventDefault();
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -38,35 +39,35 @@ class CreateBump extends Component {
 
   handleCreateBump = () => {
     this.setState({
-      creating: true
+      creating: true,
     });
   };
 
-  handleImage = e => {
+  handleImage = (e) => {
     if (e.target.files[0]) {
       const image = e.target.files[0];
       this.setState({
-        image
+        image,
       });
     }
   };
 
-  handleUpload = e => {
+  handleUpload = (e) => {
     e.preventDefault();
     const { image } = this.state;
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
     uploadTask.on(
       "state_changed",
-      snapshot => {
+      (snapshot) => {
         // shows progress %
         const progressBar = Math.round(
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
         this.setState({
-          progress: progressBar
+          progress: progressBar,
         });
       },
-      error => {
+      (error) => {
         return error;
       },
       () => {
@@ -75,9 +76,9 @@ class CreateBump extends Component {
           .ref("images")
           .child(image.name)
           .getDownloadURL()
-          .then(url => {
+          .then((url) => {
             this.setState({
-              image: url
+              image: url,
             });
           });
       }
@@ -86,11 +87,11 @@ class CreateBump extends Component {
   handleCancel = () => {
     this.setState({
       creating: false,
-      specificBlog: null
+      specificBlog: null,
     });
   };
 
-  handleDelete = slug => {
+  handleDelete = (slug) => {
     axios
       .delete(
         `https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/family/${slug}`
@@ -98,21 +99,21 @@ class CreateBump extends Component {
       .then(() => {
         this.fetchFamily();
       })
-      .catch(err => {
+      .catch((err) => {
         throw err;
       });
   };
 
-  showBlogDetails = blogId => {
-    this.setState(prevState => {
+  showBlogDetails = (blogId) => {
+    this.setState((prevState) => {
       const selectedBlog = prevState.bumpArray.find(
-        blog => blog._id === blogId
+        (blog) => blog._id === blogId
       );
       return { specificBlog: selectedBlog };
     });
   };
 
-  handleConfirm = event => {
+  handleConfirm = (event) => {
     event.preventDefault();
     const { title, image } = this.state;
     const bumpData = { title, image };
@@ -120,7 +121,7 @@ class CreateBump extends Component {
     // eslint-disable-next-line react/prop-types
     this.props.uploadFamilyAction(bumpData);
     this.setState({
-      creating: false
+      creating: false,
     });
   };
 
@@ -132,14 +133,14 @@ class CreateBump extends Component {
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/family"
       )
-      .then(response => {
+      .then((response) => {
         const blogs = response.data.results;
         this.setState({
           bumpArray: blogs,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         return err;
       });
   };
@@ -149,11 +150,12 @@ class CreateBump extends Component {
       bumpArray,
       isLoading,
       specificBlog,
-      progress
+      progress,
     } = this.state;
     const userToken = localStorage.getItem("token");
     return (
       <React.Fragment>
+        <Header />
         {(creating || specificBlog) && <Backdrop />}
         {creating && (
           <MyModal
@@ -225,10 +227,7 @@ class CreateBump extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  newFamily: state.familyReducer.newFamily
+const mapStateToProps = (state) => ({
+  newFamily: state.familyReducer.newFamily,
 });
-export default connect(
-  mapStateToProps,
-  { uploadFamilyAction }
-)(CreateBump);
+export default connect(mapStateToProps, { uploadFamilyAction })(CreateBump);

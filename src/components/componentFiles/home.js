@@ -11,10 +11,12 @@ import image6 from "../../assets/images/image6.jpg";
 import image7 from "../../assets/images/image7.jpg";
 import image from "../../assets/images/image.jpg";
 import "../../assets/styles/home.css";
+import HomeHeader from "../common/HomeNav";
 
 const HomePage = () => {
   return (
     <React.Fragment>
+      <HomeHeader />
       <section>
         <div className='wrapper'>
           <Carousel>

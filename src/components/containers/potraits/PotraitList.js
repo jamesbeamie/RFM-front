@@ -3,10 +3,10 @@ import React from "react";
 import PotraitItem from "./PotraitItem";
 import "../../../assets/styles/blogList.css";
 
-const PotraitList = props => {
+const PotraitList = (props) => {
   // can also use () then call this.props
   const eraseFunction = props.deletePtrait;
-  const fetchedPotraits = props.potraits.map(protrait => {
+  const fetchedPotraits = props.potraits.map((protrait) => {
     console.log("potrait-slug", protrait.slug);
     return (
       <PotraitItem
@@ -18,7 +18,11 @@ const PotraitList = props => {
       />
     );
   });
-  return <div className='row'>{fetchedPotraits}</div>;
+  return (
+    <div className='row' id='header-space'>
+      {fetchedPotraits}
+    </div>
+  );
 };
 
 export default PotraitList;

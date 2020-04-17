@@ -3,10 +3,10 @@ import React from "react";
 import BumpItem from "./BumpItem";
 import "../../../assets/styles/blogList.css";
 
-const BumpList = props => {
+const BumpList = (props) => {
   // can also use () then call this.props
   const eraseFunction = props.deleteBump;
-  const fetchedBumps = props.bumps.map(bump => {
+  const fetchedBumps = props.bumps.map((bump) => {
     return (
       <BumpItem
         key={bump.id}
@@ -17,7 +17,11 @@ const BumpList = props => {
       />
     );
   });
-  return <div className='row'>{fetchedBumps}</div>;
+  return (
+    <div className='row' id='header-space'>
+      {fetchedBumps}
+    </div>
+  );
 };
 
 export default BumpList;

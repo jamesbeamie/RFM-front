@@ -3,10 +3,10 @@ import React from "react";
 import FamilyItem from "./FamilyItem";
 import "../../../assets/styles/blogList.css";
 
-const FamilyList = props => {
+const FamilyList = (props) => {
   // can also use () then call this.props
   const eraseFunction = props.deleteFam;
-  const fetchedEngagements = props.families.map(familia => {
+  const fetchedEngagements = props.families.map((familia) => {
     return (
       <FamilyItem
         key={familia.id}
@@ -17,7 +17,11 @@ const FamilyList = props => {
       />
     );
   });
-  return <div className='row'>{fetchedEngagements}</div>;
+  return (
+    <div className='row' id='header-space'>
+      {fetchedEngagements}
+    </div>
+  );
 };
 
 export default FamilyList;
