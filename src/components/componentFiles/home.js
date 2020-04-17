@@ -19,7 +19,7 @@ const HomePage = () => {
       <HomeHeader />
       <section>
         <div className='wrapper'>
-          <Carousel>
+          <Carousel interval={2000}>
             <Carousel.Item>
               <img
                 src={image3}

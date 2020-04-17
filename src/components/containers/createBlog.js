@@ -198,7 +198,6 @@ class CreateBlog extends Component {
   fetchBlogs = () => {
     this.setState({ isLoading: true });
 
-    // acces api
     axios
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/blog/"
@@ -217,7 +216,6 @@ class CreateBlog extends Component {
   fetchBumps = () => {
     this.setState({ isLoading: true });
 
-    // acces api
     axios
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/bump/"
@@ -236,7 +234,6 @@ class CreateBlog extends Component {
   fetchChundren = () => {
     this.setState({ isLoading: true });
 
-    // acces api
     axios
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/children"
@@ -255,7 +252,6 @@ class CreateBlog extends Component {
   fetchEngagements = () => {
     this.setState({ isLoading: true });
 
-    // acces api
     axios
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/engagements/"
@@ -274,7 +270,6 @@ class CreateBlog extends Component {
   fetchFamily = () => {
     this.setState({ isLoading: true });
 
-    // acces api
     axios
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/family"
@@ -293,7 +288,6 @@ class CreateBlog extends Component {
   fetchPotraits = () => {
     this.setState({ isLoading: true });
 
-    // acces api
     axios
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/potraits/"
@@ -313,7 +307,6 @@ class CreateBlog extends Component {
   fetchEvents = () => {
     this.setState({ isLoading: true });
 
-    // acces api
     axios
       .get(
         "https://royalframesmedia-api.herokuapp.com/photography/royalframesmedia/events"
