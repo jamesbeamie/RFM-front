@@ -1,30 +1,64 @@
+body {
+  padding-top: 5%;
+}
 #plx {
-	background: url('../images/image7.jpg');
-	opacity: .8;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background: url("../images/image7.jpg");
+  opacity: 0.8;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .wtitle {
-	height: 30rem;
+  height: 30rem;
 }
 .wtitle h5 {
-	color: white;
-	padding: 2rem 0;
+  color: white;
+  padding: 2rem 0;
 }
 .wtitlebtm {
-	height: 33rem;
+  height: 33rem;
 }
 .wtitlebtm p {
-	color: rgb(247, 244, 244);
-	padding: 15rem 0;
+  color: rgb(247, 244, 244);
+  padding: 15rem 0;
 }
 #wordding {
-	height: 80%;
+  height: 30rem;
 }
 #wordding img {
-	height: 45rem;
-	width: 100%;
-	object-fit: cover;
+  height: 25rem;
+  width: 25rem;
+  object-fit: cover;
+  border-radius: 20rem;
+  margin-top: 5rem;
+}
+.msg-abt {
+  padding-top: 10rem;
+}
+
+.fb {
+  color: rgb(9, 114, 212);
+}
+.ig {
+  color: purple;
+}
+.fb:hover {
+  color: rgb(111, 145, 168);
+}
+.ig:hover {
+  color: rgb(231, 169, 231);
+}
+.call {
+  color: forestgreen;
+}
+.contact {
+  color: grey;
+}
+.abt-rfm {
+  padding: 0 0 1rem 5rem;
+}
+.abt-rfm a {
+  padding: 2px;
+  cursor: pointer;
 }

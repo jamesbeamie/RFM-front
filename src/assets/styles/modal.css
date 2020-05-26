@@ -1,34 +1,33 @@
 .MyModal {
-	width: 100%;
-	/* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26); */
-	position: absolute;
-	top: 20vh;
-	left: 5%;
-	color: rgb(10, 10, 10);
-	z-index: 100;
+  width: 100%;
+  position: absolute;
+  top: 20vh;
+  left: 5%;
+  color: rgb(10, 10, 10);
+  z-index: 100;
 }
 .MyModal_header {
-	padding: 1rem;
+  padding: 1rem;
 }
 .MyModal_header h1 {
-	margin: 0;
-	font-size: 1.25rem;
+  margin: 0;
+  font-size: 1.25rem;
 }
 .MyModal_content {
-	padding: 1rem;
-	background: rgb(255, 254, 255);
+  padding: 1rem;
+  background: rgb(255, 254, 255);
 }
 .MyModal_actions {
-	display: flex;
-	padding: 1rem;
+  display: flex;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
-	.MyModal {
-		width: 60rem;
-		left: calc((100% - 60rem) / 2);
-	}
+  .MyModal {
+    width: 60rem;
+    left: calc((100% - 60rem) / 2);
+  }
 }
 .tagi {
-	color: rgb(134, 129, 129);
-	font-size: 10px;
+  color: rgb(134, 129, 129);
+  font-size: 10px;
 }
