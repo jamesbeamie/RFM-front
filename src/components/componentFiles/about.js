@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -45,7 +44,6 @@ const AboutPage = () => {
         <div id='wording' className='row container-fluid bg-light '>
           <div className='col-sm-4 abt-rfm'>
             <h5>Who we are</h5>
-            {/* <p className='fonti'>We are RoyalFramesMedia, </p> */}
             <p className='fonti'>
               A company founded by Rose Brian, motivated by the need to have
               more creative content creators
@@ -68,10 +66,6 @@ const AboutPage = () => {
               <FontAwesomeIcon icon={faAddressBook} className='contact' />{" "}
               royalframesmedia@gmail.com
             </p>
-            {/* <SocialMediaIconsReact
-                icon='instagram'
-                url='http://instagram.com/royalframesmedia'
-              /> */}
 
             <a href='http://instagram.com/royalframesmedia'>
               <FontAwesomeIcon
@@ -80,18 +74,9 @@ const AboutPage = () => {
                 url='http://instagram.com/royalframesmedia'
               />
             </a>
-            {/* <SocialMediaIconsReact
-                icon='facebook'
-                className='soc-media'
-                url='http://facebook.com/royalframesmedia'
-              /> */}
 
             <a href='http://facebook.com/royalframesmedia'>
-              <FontAwesomeIcon
-                icon={faFacebook}
-                className='fb'
-                // url='http://facebook.com/royalframesmedia'
-              />
+              <FontAwesomeIcon icon={faFacebook} className='fb' />
             </a>
           </div>
         </div>
